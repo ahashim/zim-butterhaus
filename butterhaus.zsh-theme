@@ -13,7 +13,7 @@ _prompt_basher_pwd() {
     current_dir=${(%):-%~}
   fi
 
-  print -n "%F{blue}${current_dir}%b"
+  print -n "%F{white}${current_dir}%b"
 }
 
 VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -32,5 +32,5 @@ if (( ${+functions[git-info]} )); then
   autoload -Uz add-zsh-hook && add-zsh-hook precmd git-info
 fi
 
-PS1='%(?:%F{green}:%F{red})λ %F{white}%n%f%F:$(_prompt_basher_pwd)${(e)git_info[prompt]} %f%(!:#:$) '
+PS1='%(?:%F{green}:%F{red})λ %F{blue}%n%f%F:$(_prompt_basher_pwd)${(e)git_info[prompt]} %f%(!:#:$) '
 RPS1='%(?::%F{red}$?)'
