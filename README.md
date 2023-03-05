@@ -1,12 +1,8 @@
-# oblong
+# butterhaus
 
 A simple bash-inspired prompt for [ZIM], the ZSH-IMproved shell.
 
-
-<img width="706" src="https://raw.githubusercontent.com/Ansimorph/oblong/main/screenshot.png" alt="Tango Dark Theme">
-<img width="619" src="https://raw.githubusercontent.com/Ansimorph/oblong/main/screenshot2.png" alt="Nord Theme">
-
-This prompt is based on [gitster] and [basher].
+This theme is based on [oblong](https://github.com/Ansimorph/oblong) and [minimal](https://github.com/zimfw/minimal).
 
 ## What does it show?
 
