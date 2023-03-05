@@ -2,6 +2,8 @@
 
 A simple bash-inspired prompt for [ZIM], the ZSH-IMproved shell.
 
+![Screenshot](./screenshot.png "butterhause theme")
+
 This theme is based on [oblong](https://github.com/Ansimorph/oblong) and [minimal](https://github.com/zimfw/minimal).
 
 ## What does it show?
