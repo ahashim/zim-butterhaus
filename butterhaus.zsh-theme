@@ -1,6 +1,6 @@
 # vim:et sts=2 sw=2 ft=zsh
 #
-# Oblong theme
+# Butterhaus theme
 #
 # Requires the `git-info` zmodule to be included in the .zimrc file.
 
@@ -27,10 +27,10 @@ if (( ${+functions[git-info]} )); then
   zstyle ':zim:git-info:clean' format '%F{green} ◍'
   zstyle ':zim:git-info:dirty' format '%F{red} ◍'
   zstyle ':zim:git-info:keys' format \
-      'prompt' ' %F{white}%b%c%C%D'
+      'prompt' ' %F{yellow}%b%c%C%D'
 
   autoload -Uz add-zsh-hook && add-zsh-hook precmd git-info
 fi
 
-PS1='%(?:%F{green}:%F{red})λ %F{red}%n%f%F:$(_prompt_basher_pwd)${(e)git_info[prompt]} %f%(!:#:$) '
+PS1='%(?:%F{green}:%F{red})λ %F{white}%n%f%F:$(_prompt_basher_pwd)${(e)git_info[prompt]} %f%(!:#:$) '
 RPS1='%(?::%F{red}$?)'
