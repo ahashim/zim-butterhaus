@@ -6,9 +6,8 @@ This theme is based on [oblong](https://github.com/Ansimorph/oblong) and [minima
 
 ## What does it show?
 
-- Red `◼` when last command failed, white otherwise.
-- Python [venv] indicator.
-- Current user. Red if user is root.
+- Red `λ` when last command failed, green otherwise.
+- Current user.
 - Current working directory, relative to the git root when in a git repo.
 - Current git branch name, or commit short hash when in ['detached HEAD' state].
 - Red `◍` when in a dirty git working tree, green `◍` when in a clean one.

@@ -32,5 +32,5 @@ if (( ${+functions[git-info]} )); then
   autoload -Uz add-zsh-hook && add-zsh-hook precmd git-info
 fi
 
-PS1='%(?:%F{white}:%F{red})◼ ${VIRTUAL_ENV:+"(${VIRTUAL_ENV:t}) "}%(!:%F{red}:%F{green})%n%f%F:$(_prompt_basher_pwd)${(e)git_info[prompt]} %f%(!:#:$) '
+PS1='%(?:%F{green}:%F{red})λ %F{red}%n%f%F:$(_prompt_basher_pwd)${(e)git_info[prompt]} %f%(!:#:$) '
 RPS1='%(?::%F{red}$?)'
