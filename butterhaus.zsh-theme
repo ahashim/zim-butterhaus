@@ -16,21 +16,18 @@ _prompt_basher_pwd() {
   print -n "%F{white}${current_dir}%b"
 }
 
-VIRTUAL_ENV_DISABLE_PROMPT=1
-
 setopt nopromptbang prompt{cr,percent,sp,subst}
 
 typeset -gA git_info
 if (( ${+functions[git-info]} )); then
-  zstyle ':zim:git-info:branch' format '%b'
+  zstyle ':zim:git-info:branch' format '%B%b'
   zstyle ':zim:git-info:commit' format '%c'
   zstyle ':zim:git-info:clean' format '%F{green} ◍'
   zstyle ':zim:git-info:dirty' format '%F{red} ◍'
-  zstyle ':zim:git-info:keys' format \
-      'prompt' ' %F{yellow}%b%c%C%D'
+  zstyle ':zim:git-info:keys' format 'prompt' ' %F{yellow}%b%c%C%D'
 
   autoload -Uz add-zsh-hook && add-zsh-hook precmd git-info
 fi
 
-PS1='%(?:%F{green}:%F{red})λ %F{blue}%n%f%F:$(_prompt_basher_pwd)${(e)git_info[prompt]} %f%(!:#:$) '
+PS1='%(?:%F{green}:%F{red}) λ %F{blue}%n%f%F:$(_prompt_basher_pwd)${(e)git_info[prompt]}%b '
 RPS1='%(?::%F{red}$?)'
